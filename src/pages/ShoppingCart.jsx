@@ -16,7 +16,7 @@ const PRODUCTS = [
 
 function ShoppingCart() {
   const [items, setItems] = useState([]);
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
 
   const addItem = (product) => {
     setItems((prev) => [...prev, { ...product, cartId: Date.now() }]);

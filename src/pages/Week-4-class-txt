@@ -1,0 +1,19 @@
+Q1---ANSWER1
+
+A controlled component in React is an input element whose value is managed by React state (using useState). Every time the user types, React updates the state and re-renders the input with the new value.(set) called “controlled” because the input does not manage its own data — React fully controls it.
+
+Q2----ANSWER 2
+A single handleChange function can manage multiple inputs by using the name attribute of each input field.
+The e.target.name identifies which input is being changed, and this allows the function to update the correct value in the state object dynamically.
+
+Q3----ANSWER3
+Conditional Rendering
+The && (short-circuit) method is used when you want to display something only if a condition is true.
+The ternary operator is used when you want to choose between two different outputs (if true or false).
+The if/else statement is used before returning JSX when the logic is more complex.
+Early return is used to immediately return a result if a condition is not met, making the code cleaner and easier to read.
+
+Q4----ANSWER4
+The issue is that React will render 0 instead of nothing.also it will show a problem. the condition most be set as false or true no/yes ----------it will show 0 on the screen
+
+

@@ -1,0 +1,117 @@
+//Q1----ANSWER 1//
+//controlled COMPONENT//
+import { useState } from "react";
+
+function App() {
+  const [name, setName] = useState("");
+
+  return (
+    <input
+      value={name}
+      onChange={(e) => setName(e.target.value)}
+    />
+  );
+}
+
+//uncontrolled input//
+<input type="text" />
+
+
+//Q2----ANSWER 2//
+import { useState } from "react";
+
+function Form() {
+  const [form, setForm] = useState({
+    username: "",
+    email: "",
+    password: ""
+  });
+
+  const handleChange = (e) => {
+    setForm({
+      ...form,
+      [e.target.name]: e.target.value
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log(form);
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input name="username" onChange={handleChange} />
+      <input name="email" onChange={handleChange} />
+      <input name="password" onChange={handleChange} />
+      <button type="submit">Submit</button>
+    </form>
+  );
+}
+
+//Q3----ANSWER 3//
+//&& (short way)//
+{isLoggedIn && <p>Welcome</p>}
+
+//? : (long way)//
+{isLoggedIn ? <p>Welcome</p> : <p>Please log in</p>}
+
+//if/else before return//
+if (isLoggedIn) {
+  return <p>Welcome</p>;
+} else {
+  return <p>Please login</p>;
+}
+
+//Early return//
+if (!isLoggedIn) return <p>Please login</p>;
+
+return <p>Welcome</p>;
+
+//Q4----ANSWER 4//
+{0 && <p>Hello</p>}
+//it will not render anything because 0 is falsy, so the expression will short-circuit and return 0 instead of rendering the <p> element.
+
+{1 && <p>Hello</p>}
+     OR
+     {Boolean(0) && <p>Hello</p>}
+    // the condition must be seT has boolean either true or false yes/no Because 0 is value it will render nothing //
+
+    //Q5----ANSWER 5//
+    import { useState } from "react";
+
+function LoginForm() {
+  const [email, setEmail] = useState("");
+  const [error, setError] = useState("");
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    if (email === "") {
+      setError("Email is required");
+    }
+  };
+
+  const handleChange = (e) => {
+    setEmail(e.target.value);
+    setError(""); 
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      <input
+        type="email"
+        value={email}
+        onChange={handleChange}
+      />
+
+      {error && <p style={{ color: "red" }}>{error}</p>}
+
+      <button type="submit">Login</button>
+    </form>
+  );
+}
+
+
+
+
