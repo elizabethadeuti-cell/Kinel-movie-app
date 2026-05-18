@@ -1,0 +1,78 @@
+//QUESTION 1//
+Q1. What is useEffect used for?
+
+useEffect is a React Hook used to perform side effects inside a component.
+A side effect means anything that happens outside the normal rendering process, such as:
+
+-Fetching data from an API
+-Updating the DOM
+-Using timers
+-Subscribing to events
+-Running code after a component renders
+
+Dependency Array
+The dependency array controls when the useEffect runs.
+
+# [] → Runs only once when the component first loads.
+
+# [userId] → Runs when the component loads and anytime userId changes.
+
+# No dependency array → Runs after every render of the component.
+
+//QUESTION 2,//
+ Race Condition in useEffect
+
+A race condition happens when multiple API requests are sent at the same time and responses return in the wrong order.
+
+For example:
+
+A user types quickly in a search bar.
+Many fetch requests are triggered.
+An older request may finish later and overwrite newer data.
+
+Without a fix, stale or outdated data can appear on the screen.
+
+The cleanup function helps prevent this by cancelling or ignoring old requests before the next effect runs or before 
+the component unmounts.
+
+//QUESTION 3//
+ Three States of Data Fetching
+
+Every component that fetches data should handle three main states:
+
+-Loading State
+Happens while data is being fetched.
+-Success State
+Happens when the data loads successfully.
+-Error State
+Happens when something goes wrong during fetching.
+
+//QUESTION 4.//
+ Difference Between GET, POST, PUT, and DELETE
+-GET
+Used to retrieve or fetch data from a server.
+
+-POST
+Used to send new data to the server and create something new.
+
+-PUT
+Used to update or replace existing data on the server.
+
+-DELETE
+Used to remove data from the server.
+
+These are HTTP request methods used when communicating with APIs.
+
+QUESTIO 5
+ Why fetch() Does Not Throw Error for 404
+
+fetch() only throws errors for network problems, such as:
+
+No internet connection
+Server unreachable
+
+A 404 response is still considered a successful network request because the server responded correctly,
+ even though the resource was not found.
+
+That is why developers manually check response.ok or the status code to determine if
+ the request actually succeeded or failed.

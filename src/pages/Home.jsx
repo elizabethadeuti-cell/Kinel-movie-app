@@ -24,28 +24,24 @@ function Home()  {
   const movieData = [
     {
        image: "/images/horror.jpg",
-       title: "SILENT ",
-       genre: "Horror",
-       description: "When a Category 5 hurricane decimates a coastal town, the storm surge brings devastation, chaos, and...",
-       button: "+ Watchlist"
-    },
-    {
-      image: "/images/movie1.webp",
-      title: " Games of Thrones",
       genre: "Action",
       description: "Brief description of Games of Thrones",
       button: "+ Watchlist"
     },
     {
-      image: "/images/movie1.webp",
-      title: "Games of Thrones",
+       image: "/images/horror.jpg",
       genre: "Action",
       description: "Brief description of Games of Thrones",
       button: "+ Watchlist"
     },
     {
-      image: "images/movie1.webp",
-      title: "Games of Thrones",
+       image: "/images/horror.jpg",
+      genre: "Action",
+      description: "Brief description of Games of Thrones",
+      button: "+ Watchlist"
+    },
+    {
+       image: "/images/horror.jpg",
       genre: "Action",
       description: "Brief description of Games of Thrones",
       button: "+ Watchlist"

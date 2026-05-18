@@ -17,3 +17,38 @@ Q4----ANSWER4
 The issue is that React will render 0 instead of nothing.also it will show a problem. the condition most be set as false or true no/yes ----------it will show 0 on the screen
 
 
+
+
+USEEFFECT
+What is useEffect used for?
+useEffect is used to run code after a component renders.
+It is mostly used for things like:
+#Fetching data from an API
+#Updating the page title
+#Running timers
+#Listening for events
+
+
+Dependency Array Explained
+The dependency array is the [].
+It controls when the useEffect should run.
+1. Empty array []
+Runs only once when the component first loads.
+JSX
+useEffect(() => {
+  console.log("Runs once");
+}, []);
+2. With variable [userId]
+Runs:
+when the component first loads
+AND whenever userId changes
+JSX
+useEffect(() => {
+  console.log("User changed");
+}, [userId]);
+3. No array at all
+Runs on every render.
+JSX
+useEffect(() => {
+  console.log("Runs every time");
+});
