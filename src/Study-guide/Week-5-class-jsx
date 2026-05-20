@@ -21,8 +21,9 @@ function Movies() {
 
         const data = await response.json();
 
-        setMovies(data);
-        setError("");
+       setMovies(data);
+
+        //setError("");//
       } catch (error) {
         setError("Something went wrong");
       } finally {
@@ -86,7 +87,8 @@ function SearchMovies({ query }) {
         if (!cancelled) {
           setError("Something went wrong");
         }
-      } finally {
+      } 
+      finally {
         if (!cancelled) {
           setIsLoading(false);
         }

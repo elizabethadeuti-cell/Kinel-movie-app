@@ -1,0 +1,44 @@
+QUESTION--1
+src/
+│
+├── features/
+│   ├── auth/
+│   │   ├── LoginPage.jsx
+│   │   ├── useAuth.js
+│   │   └── AuthContext.jsx
+│   │
+│   └── movies/
+│       ├── MovieCard.jsx
+│       └── useMovies.js
+│
+├── components/
+│   ├── Button.jsx
+│   └── UserCard.jsx
+│
+└── utils/
+    └── formatDate.js
+
+
+    QUESTION ---2
+    React Components → PascalCase
+React components start with capital letters.
+eg--------UserCard.jsx, MovieCard.jsx
+
+========== 1b
+Custom Hooks → start with use
+Custom hooks use camelCase and MUST begin with use.
+eg---------useAuth.js, useEffect,useState
+
+==========1c
+Utility Functions → camelCase
+Utility/helper functions use normal camelCase.
+eg--------formatDate.js, calculateTotal.js
+
+==========1d
+Why must a custom hook start with use?
+React uses the word use to recognize hooks.
+
+It helps:
+React know it is a hook
+ESLint check hook rules correctly
+Prevent hook misuse
